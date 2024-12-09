@@ -64,13 +64,13 @@ function App() {
     if(val<=100){
     const i=getIndex(item_id,datas,"id")
     const child_i=getIndex(child.id,datas[i].children,"id")
-    const oldval=datas[i].children[child_i].value
+   
     datas[i].children[child_i].value+=((val/100)*datas[i].children[child_i].value)
-    const variance=((oldval-val)/(oldval))*100
-    console.log(Math.abs(variance))
+    
+    console.log(Math.abs(val))
     setup(1);
     
-    return(Math.abs(variance));
+    return(Math.abs(val));
    
     }
    
